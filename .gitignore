@@ -1,17 +1,60 @@
+# =====================
 # Next.js
+# =====================
 .next/
 out/
+dist/
+build/
 
+# =====================
 # Node
+# =====================
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Env
+# =====================
+# Environment Variables (VERY IMPORTANT)
+# =====================
 .env
 .env.local
+.env.*.local
 
-# OS
+# =====================
+# OS / System Files
+# =====================
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# =====================
+# Editor / IDE
+# =====================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =====================
+# Logs
+# =====================
+logs/
+*.log
+
+# =====================
+# Cache / Temporary
+# =====================
+.cache/
+.tmp/
+.temp/
+*.swp
+*.swo
+
+# =====================
+# GitHub Large Files Prevention
+# =====================
+*.pack
+*.zip
+*.tar.gz
