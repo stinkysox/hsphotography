@@ -8,9 +8,11 @@ export const galleryCategories = [
   "Pre-Wedding",
   "Engagement",
   "Haldi",
+  "Reception",
   "Mehandi",
   "Maternity",
-  "Birthday"
+  "Pre-Birthday",
+  "Birthday",
 ];
 
 const rawImages = {
@@ -178,6 +180,107 @@ const rawImages = {
       "title": "Pure Innocence"
     }
   ],
+
+  "Reception": [
+  {
+    "title": "The Grand Entrance",
+    "src": "https://i.postimg.cc/xTjKHcsM/SAI08795.jpg"
+  },
+  {
+    "title": "Elegant Evening",
+    "src": "https://i.postimg.cc/NjkSDNmK/IMG-9604-JPG.jpg"
+  },
+  {
+    "title": "Heartfelt Toast",
+    "src": "https://i.postimg.cc/L8pGzdYh/IMG-9609-JPG.jpg"
+  },
+  {
+    "title": "Candlelit Ambience",
+    "src": "https://i.postimg.cc/W1vxMRDB/IMG-9611-JPG.jpg"
+  },
+  {
+    "title": "Joyful Celebration",
+    "src": "https://i.postimg.cc/GmxVKMGD/SAI07467.jpg"
+  },
+  {
+    "title": "Sharing a Smile",
+    "src": "https://i.postimg.cc/dVjp6Wr6/SAI07507.jpg"
+  },
+  {
+    "title": "The Dance Floor",
+    "src": "https://i.postimg.cc/nhGg2dBF/SAI07761.jpg"
+  },
+  {
+    "title": "Moments Together",
+    "src": "https://i.postimg.cc/DwTRqVJy/SAI08765.jpg"
+  },
+  {
+    "title": "Final Send-off",
+    "src": "https://i.postimg.cc/tR8K4n9g/SAI08863.jpg"
+  }
+],
+ "Pre-Birthday": [
+  {
+    "title": "Little Explorer",
+    "src": "https://i.postimg.cc/ydMZkyQq/CNU00070-jpg.jpg"
+  },
+  {
+    "title": "Giggly Moments",
+    "src": "https://i.postimg.cc/y81SgdTf/CNU00232-jpg.jpg"
+  },
+  {
+    "title": "Tiny Trendsetter",
+    "src": "https://i.postimg.cc/MKbQpR1r/CNU00287-jpg.jpg"
+  },
+  {
+    "title": "Sun-Kissed Smiles",
+    "src": "https://i.postimg.cc/jqffBB2s/CNU00376-jpg.jpg"
+  },
+  {
+    "title": "Whimsical Wonders",
+    "src": "https://i.postimg.cc/HWMMFFnm/CNU00769-jpg.jpg"
+  },
+  {
+    "title": "Childhood Magic",
+    "src": "https://i.postimg.cc/YqwF78LY/CNU00793-copy-jpg.jpg"
+  },
+  {
+    "title": "Playful Portraits",
+    "src": "https://i.postimg.cc/Z5wvrS7R/IMG-0589-JPG.jpg"
+  },
+  {
+    "title": "The Birthday Countdown",
+    "src": "https://i.postimg.cc/g2z6XJK5/IMG-0594-JPG.jpg"
+  },
+  {
+    "title": "Sweet Innocence",
+    "src": "https://i.postimg.cc/GmLs82QR/IMG-0595-JPG.jpg"
+  },
+  {
+    "title": "Curious Eyes",
+    "src": "https://i.postimg.cc/L8xgzpC6/IMG-0610-JPG.jpg"
+  },
+  {
+    "title": "Park Adventures",
+    "src": "https://i.postimg.cc/VkK0j8GF/IMG-4112-JPG.jpg"
+  },
+  {
+    "title": "Golden Tot",
+    "src": "https://i.postimg.cc/GmXTkC7s/IMG-4138-JPG.jpg"
+  },
+  {
+    "title": "Ready for Fun",
+    "src": "https://i.postimg.cc/ry4477sM/MK-02080-jpg.jpg"
+  },
+  {
+    "title": "Twinkle in the Eye",
+    "src": "https://i.postimg.cc/Wb6k1r0K/MK-02227-copy-jpg.jpg"
+  },
+  {
+    "title": "Turning One Soon",
+    "src": "https://i.postimg.cc/8PVvGwf8/MK-02681-jpg.jpg"
+  }
+],
    "Birthday": [
   {
     "title": "Confetti Celebration",
