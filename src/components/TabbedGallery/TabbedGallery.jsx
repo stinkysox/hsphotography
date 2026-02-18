@@ -53,34 +53,9 @@ const TabbedGallery = () => {
   const [selectedIdx, setSelectedIdx] = useState(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   
-  // Pagination logic to prevent DOM bloat
-  const [visibleCount, setVisibleCount] = useState(12);
-
   const filteredImages = useMemo(() => {
     return galleryImagesByCategory[activeTab] || [];
   }, [activeTab]);
-
-  // Reset visible count when tab changes
-  useEffect(() => {
-    setVisibleCount(12);
-  }, [activeTab]);
-
-  // Infinite Scroll Logic
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.innerHeight + window.scrollY;
-      const threshold = document.body.offsetHeight - 800;
-      
-      if (scrollPosition >= threshold) {
-        if (visibleCount < filteredImages.length) {
-          setVisibleCount(prev => Math.min(prev + 8, filteredImages.length));
-        }
-      }
-    };
-    
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [visibleCount, filteredImages.length]);
 
   // Handle Keyboard Navigation
   useEffect(() => {
@@ -226,10 +201,10 @@ const TabbedGallery = () => {
           </AnimatePresence>
         </div>
 
-        {/* MASONRY GRID - Only renders visibleCount */}
+        {/* MASONRY GRID */}
         <div className="columns-2 md:columns-3 xl:columns-4 gap-4 [column-fill:_balance]">
           <AnimatePresence mode="popLayout">
-            {filteredImages.slice(0, visibleCount).map((image, idx) => (
+            {filteredImages.map((image, idx) => (
               <motion.div
                 key={image.id}
                 layout
@@ -250,13 +225,6 @@ const TabbedGallery = () => {
             ))}
           </AnimatePresence>
         </div>
-        
-        {/* Loading Indicator for Infinite Scroll */}
-        {visibleCount < filteredImages.length && (
-          <div className="py-10 text-center text-gold/30 text-xs uppercase tracking-widest animate-pulse">
-            Discovering more magic...
-          </div>
-        )}
       </div>
 
       {/* LIGHTBOX */}
