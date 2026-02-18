@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-onyx: #121212;
+  --color-gold: #c5a059;
+  --color-gold-light: #dfc18c;
+  --color-pearl: #fdfdfd;
+  --color-silk: #f4f1ea;
+  --color-slate: #2a2a2a;
+  
+  /* Fonts */
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-accent: var(--font-accent);
+
+  /* Animations */
+  --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.3s ease;
+}
+
+@layer base {
+  html, body {
+    @apply h-full w-full scroll-smooth bg-onyx text-pearl;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    
+    /* Standard Scrollbar for Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gold) var(--color-onyx);
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-heading tracking-wider text-pearl;
+  }
+
+  p {
+    @apply font-body font-light text-pearl/85 text-base md:text-lg;
+  }
+
+  button, a {
+    @apply cursor-pointer transition-all duration-300;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 lg:px-12;
+  }
+
+  .premium-btn {
+    @apply px-8 py-3 font-body font-semibold uppercase tracking-widest rounded-sm transition-all duration-500 inline-block text-center;
+  }
+
+  .premium-btn-primary {
+    @apply bg-gold text-onyx border border-gold hover:bg-gold-light hover:-translate-y-1 hover:shadow-xl hover:shadow-gold/20;
+  }
+
+  .premium-btn-secondary {
+    @apply bg-transparent text-pearl border border-pearl/30 hover:border-gold hover:text-gold hover:-translate-y-1 hover:shadow-xl hover:shadow-white/5;
+  }
+
+  .accent-line {
+    @apply w-16 h-0.5 bg-gold mx-auto mt-6;
+  }
+}
+
+@layer utilities {
+  /* High-Performance Shimmer */
+  .shimmer-mask {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.03) 25%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.03) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer-pulse 2s infinite linear;
+  }
+
+  /* Dropdown Fix: Force isolation to stop z-index bleeding */
+  .gallery-grid-isolate {
+    isolation: isolate;
+  }
+}
+
+@keyframes shimmer-pulse {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+/* Webkit Scrollbar (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212; /* Hardcoded for scrollbar consistency */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dfc18c;
+}
