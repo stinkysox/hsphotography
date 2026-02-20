@@ -9,12 +9,12 @@ export const photographyData = {
   },
   contact: {
     phones: ["8074670691", "9100754538"],
-    address: "Banjara Hills Road number 12, Hyderabad, Sindh 500079",
+    address: "3-9-121/1, Road no 1, Central Bank colony, LB nagar - 500068",
     mapLocation: {
       lat: 17.4165,
       lng: 78.4357
     },
-    googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.9248589!2d78.432616!3d17.4124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9746c0a00001%3A0x6a0c0c0c0c0c0c0c!2sBanjara%20Hills%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+    googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d476.03792455529106!2d78.55830316317018!3d17.349127907915513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDIwJzU3LjciTiA3OMKwMzMnMzAuNSJF!5e0!3m2!1sen!2sin!4v1771578404340!5m2!1sen!2sin"
   },
   services: [
     {
